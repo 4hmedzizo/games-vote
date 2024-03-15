@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote for the Best Game Ever</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Vote for the Best Game Ever You Played</h1>
+        <p>Select your favorite game from the list below:</p>
+        <ul>
+            <li><input type="radio" name="game" value="Super Mario Bros"> Super Mario Bros</li>
+            <li><input type="radio" name="game" value="The Legend of Zelda: Ocarina of Time"> The Legend of Zelda: Ocarina of Time</li>
+        </ul>
+        <button onclick="submitVote()">Submit Vote</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function submitVote() {
+            const selectedGame = document.querySelector('input[name="game"]:checked').value;
+            document.getElementById("result").textContent = `You voted for ${selectedGame}!`;
+        }
+    </script>
+</body>
+</html>
